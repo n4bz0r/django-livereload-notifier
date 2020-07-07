@@ -8,7 +8,7 @@ server when files in those directories are modified or when development server i
 
 There is also a convenient middleweare that injects livereload `<script>` tag into all pages.
 
-The client-side script should be provided by livereload server (it usually is).
+The client-side script should be provided by a livereload server (it usually is).
 
 ## Features
 
@@ -41,7 +41,7 @@ and ended up rewriting the entire thing to my liking.
 ### Requirements
 
 - Python 3.6+ (mostly because of `f-strings`). Open an issue if you think an older
-  version should really be supported
+  version should *really* be supported
 - Django 2+
 
 ### Package installation
@@ -50,16 +50,26 @@ and ended up rewriting the entire thing to my liking.
 pip install git+https://github.com/n4bz0r/django-livereload-notifier.git
 ```
 
-The package is not yet available on PyPi.
+Or if you want to specify the exact version (commit):
+
+```bash
+pip install git+https://github.com/n4bz0r/django-livereload-notifier.git@83a163b7e48eaf94e44b8851bd1a8b0398d3da1d
+```
+
+`requirements.txt` string:
+
+`git+https://github.com/n4bz0r/django-livereload-notifier.git@83a163b7e48eaf94e44b8851bd1a8b0398d3da1d`
+
+*The package is not yet available on PyPi.*
 
 ### Registering the application
 
-Add `livereload.django` application to Django `INSTALLED_APPS` setting.
+Add `'livereload.django'` application to Django `INSTALLED_APPS` setting.
 
 ### Registering the script injecting middleware
 
-Add `livereload.django.middleware.LiveReloadScriptInjector` to Django `MIDDLEWARE` setting 
-before the `django.contrib.staticfiles` (if used).
+Add `'livereload.django.middleware.LiveReloadScriptInjector'` to Django `MIDDLEWARE` setting 
+before the `'django.contrib.staticfiles'` (if used).
 
 ### Running
 
@@ -82,9 +92,9 @@ find in the following section.
 
 ### Livereload server implementations
 
-- <https://github.com/vohof/gulp-livereload> (gulp plugin, that's what I use)
-- <https://github.com/lepture/python-livereload> (python)
-- <https://github.com/mklabs/tiny-lr> (nodejs)
+- Node.js <https://github.com/mklabs/tiny-lr>
+- Node.js (Gulp): <https://github.com/vohof/gulp-livereload>
+- Python: <https://github.com/lepture/python-livereload>
 
 ### Thanks
 
