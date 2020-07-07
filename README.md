@@ -58,7 +58,9 @@ pip install git+https://github.com/n4bz0r/django-livereload-notifier.git@83a163b
 
 `requirements.txt` string:
 
-`git+https://github.com/n4bz0r/django-livereload-notifier.git@83a163b7e48eaf94e44b8851bd1a8b0398d3da1d`
+```
+git+https://github.com/n4bz0r/django-livereload-notifier.git@83a163b7e48eaf94e44b8851bd1a8b0398d3da1d
+```
 
 *The package is not yet available on PyPi.*
 
